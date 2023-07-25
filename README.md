@@ -1,6 +1,7 @@
 # Gym-Git-Exercise-Solutions2
 ##Bundle 1
 ###Exercise1
+```
 Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git init
 Initialized empty Git repository in /Users/andelarwanda/Desktop/TheGym/git-exrcises2/.git/
 Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git branch -m main master
@@ -112,4 +113,5 @@ Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git checkout dev
 Switched to branch 'dev'
 Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git branch -d test
 Deleted branch test (was 33c43da).
-Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ 
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$
+```
