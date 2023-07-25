@@ -1,6 +1,6 @@
 # Gym-Git-Exercise-Solutions2
-##Bundle 1
-###Exercise1
+## Bundle 1
+### Exercise1
 ```
 Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git init
 Initialized empty Git repository in /Users/andelarwanda/Desktop/TheGym/git-exrcises2/.git/
