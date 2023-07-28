@@ -287,3 +287,140 @@ To https://github.com/kunda4/git-exercises.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 ```
+## Bundle 2
+### Exercice 2
+```
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git pull
+remote: Enumerating objects: 2, done.
+remote: Counting objects: 100% (2/2), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), 1.26 KiB | 429.00 KiB/s, done.
+From https://github.com/kunda4/git-exercices2
+   33c43da..27e7ddf  main       -> origin/main
+Updating 33c43da..27e7ddf
+Fast-forward
+ home.html     | 10 ++++++++++
+ services.html | 10 ++++++++++
+ team.html     | 10 ++++++++++
+ 3 files changed, 30 insertions(+)
+ create mode 100644 home.html
+ create mode 100644 services.html
+ create mode 100644 team.html
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git commit -m "new changes to services.html"
+On branch ft/service-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git push --set-upstream origin ft/service-redesign
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/kunda4/git-exercices2/pull/new/ft/service-redesign
+remote: 
+To https://github.com/kunda4/git-exercices2.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git add .
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git commit --amend --no-edit
+[ft/service-redesign b628c2f] Merge pull request #2 from kunda4/ft/bundle-2
+ Author: Ibrahim Bagalwa <67462827+IbrahimBagalwa@users.noreply.github.com>
+ Date: Thu Jul 27 20:06:27 2023 +0200
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git push --set-upstream origin ft/service-redesign
+To https://github.com/kunda4/git-exercices2.git
+ ! [rejected]        ft/service-redesign -> ft/service-redesign (non-fast-forward)
+error: failed to push some refs to 'https://github.com/kunda4/git-exercices2.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git push --set-upstream origin ft/service-redesign --force
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 572 bytes | 572.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/kunda4/git-exercices2.git
+ + 27e7ddf...b628c2f ft/service-redesign -> ft/service-redesign (forced update)
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git add .
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git commit -m "change on main"
+[main cd374dd] change on main
+ 1 file changed, 5 insertions(+)
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git push --set-upstream origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 466 bytes | 466.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/kunda4/git-exercices2.git
+   27e7ddf..cd374dd  main -> main
+branch 'main' set up to track 'origin/main'.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git diff main..ft/service-redesign
+diff --git a/services.html b/services.html
+index b198148..17f5d4a 100644
+--- a/services.html
++++ b/services.html
+@@ -7,9 +7,9 @@
+ <body>
+     <h1>services</h1>
+     <ul>
+-        <li><a href="about"></a></li>
+-        <li><a href="about"></a></li>
+-        <li><a href="about"></a></li>
++        <li><a href="#">Home</a></li>
++        <li><a href="#">Home</a></li>
++        <li><a href="#">Home</a></li>
+     </ul>
+ </body>
+ </html>
+\ No newline at end of file
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git merge origin main
+merge: origin - not something we can merge
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git add .
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git merge --continue
+[ft/service-redesign 6a374a1] Merge branch 'main' into ft/service-redesign
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git add .
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git commit --amend --no-edit
+[ft/service-redesign bdd934d] Merge branch 'main' into ft/service-redesign
+ Date: Fri Jul 28 19:15:21 2023 +0200
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 392 bytes | 392.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/kunda4/git-exercices2.git
+   b628c2f..bdd934d  ft/service-redesign -> ft/service-redesign
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ 
+```
