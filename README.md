@@ -424,3 +424,157 @@ To https://github.com/kunda4/git-exercices2.git
    b628c2f..bdd934d  ft/service-redesign -> ft/service-redesign
 Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ 
 ```
+## Bundle 3
+### Exercice 1
+```
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ touch team.html
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git commit -m "new page"
+On branch ft/team-page
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   team.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git add .
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git commit -m "new page"
+[ft/team-page 059f7fc] new page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git push --set-upstream origin ft/team-page
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 337 bytes | 337.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/kunda4/git-exercices2/pull/new/ft/team-page
+remote: 
+To https://github.com/kunda4/git-exercices2.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git log
+commit 059f7fc0c3c2769e04166a28dd1a7798717124d5 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Agnes IRADUKUNDA <101483232+kunda4@users.noreply.github.com>
+Date:   Tue Aug 1 12:44:01 2023 +0200
+
+    new page
+
+commit bdd934d32a8789290b63f3e4f119053e780260ab (origin/ft/service-redesign, ft/service-redesign)
+Merge: b628c2f cd374dd
+Author: Agnes IRADUKUNDA <101483232+kunda4@users.noreply.github.com>
+Date:   Fri Jul 28 19:15:21 2023 +0200
+
+    Merge branch 'main' into ft/service-redesign
+
+commit cd374dd73fb12e0328a2048406f8fc60eb87a2ef (origin/main, main, ft/contact-page)
+Author: Agnes IRADUKUNDA <101483232+kunda4@users.noreply.github.com>
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git cherry-pick 059f7fc0c3c2769e04166a28dd1a7798717124d5
+[ft/contact-page c64fb3b] new page
+ Date: Tue Aug 1 12:44:01 2023 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git add .
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git commit -m "add last commit"
+On branch ft/contact-page
+nothing to commit, working tree clean
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git push
+fatal: The current branch ft/contact-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/contact-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$  git push --set-upstream origin ft/contact-page
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 342 bytes | 342.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/kunda4/git-exercices2/pull/new/ft/contact-page
+remote: 
+To https://github.com/kunda4/git-exercices2.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ touch faq.html
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git add .
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git commit -m "new faq.html file"
+[ft/faq-page ae4339f] new faq.html file
+ 1 file changed, 10 insertions(+)
+ create mode 100644 faq.html
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git push
+fatal: The current branch ft/faq-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/faq-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 453 bytes | 453.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/kunda4/git-exercices2/pull/new/ft/faq-page
+remote: 
+To https://github.com/kunda4/git-exercices2.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git revert 059f7fc0c3c2769e04166a28dd1a7798717124d5
+[ft/faq-page 5b3da2b] Revert "new page"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git add .
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git commit -m "revert"
+On branch ft/faq-page
+Your branch is ahead of 'origin/ft/faq-page' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 373 bytes | 373.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/kunda4/git-exercices2.git
+   ae4339f..5b3da2b  ft/faq-page -> ft/faq-page
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ 
+```
