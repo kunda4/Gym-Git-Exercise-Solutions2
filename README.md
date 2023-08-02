@@ -578,3 +578,107 @@ To https://github.com/kunda4/git-exercices2.git
    ae4339f..5b3da2b  ft/faq-page -> ft/faq-page
 Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ 
 ```
+## Bundle 3
+### Exercice 2
+```
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git add .
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git commit -m "make changes on main"
+[main 4e68d68] make changes on main
+ 1 file changed, 5 insertions(+)
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git rebase main
+Auto-merging team.html
+CONFLICT (content): Merge conflict in team.html
+error: could not apply c64fb3b... new page
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply c64fb3b... new page
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git status
+interactive rebase in progress; onto 4e68d68
+Last command done (1 command done):
+   pick c64fb3b new page
+Next commands to do (2 remaining commands):
+   pick ae4339f new faq.html file
+   pick 5b3da2b Revert "new page"
+  (use "git rebase --edit-todo" to view and edit)
+You are currently rebasing branch 'ft/home-page-redesign' on '4e68d68'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   team.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git add .
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git rebase --continue
+[detached HEAD de725b4] new page
+ 1 file changed, 1 insertion(+)
+Auto-merging team.html
+CONFLICT (content): Merge conflict in team.html
+error: could not apply 5b3da2b... Revert "new page"
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 5b3da2b... Revert "new page"
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git add .
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git rebase --continue
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git add .
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git rebase --continue
+fatal: No rebase in progress?
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git status
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git add .
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git status
+On branch ft/home-page-redesign
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   home.html
+
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git commit -m"add change to home page"
+[ft/home-page-redesign 355ddb9] add change to home page
+ 1 file changed, 5 insertions(+)
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$  git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 1.48 KiB | 378.00 KiB/s, done.
+Total 12 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/kunda4/git-exercices2/pull/new/ft/home-page-redesign
+remote: 
+To https://github.com/kunda4/git-exercices2.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ 
+```
