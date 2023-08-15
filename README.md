@@ -925,6 +925,8 @@ To https://github.com/kunda4/git-cafe-exercise.git
 branch 'fix-bug' set up to track 'origin/fix-bug'.
 Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ 
 ```
+## Bundle 6
+### Exercice 3
 ```bash
 Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ git add .
 Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ git status
