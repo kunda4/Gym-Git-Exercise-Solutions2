@@ -823,7 +823,7 @@ branch 'ft/squashing' set up to track 'origin/ft/squashing'.
 Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ 
 ```
 ## Bundle 5
-### Exercice 1
+### Exercice 2
 ```bash
 Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ git add .
 Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ git status
@@ -847,4 +847,42 @@ Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/kunda4/git-cafe-exercise.git
    d1d3f9c..e71efea  main -> main
+```
+## Bundle 6
+### Exercice 1
+```bash
+Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ git checkout -b ft/new-branch
+Switched to a new branch 'ft/new-branch'
+Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ touch menu.html
+Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ git add .
+Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ git commit -m "add new change to menu"
+[ft/new-branch f94a552] add new change to menu
+ 1 file changed, 14 insertions(+)
+ create mode 100644 menu.html
+Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ git push
+fatal: The current branch ft/new-branch has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/new-branch
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ 
+Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$    git push --set-upstream origin ft/new-branch
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 485 bytes | 485.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/new-branch' on GitHub by visiting:
+remote:      https://github.com/kunda4/git-cafe-exercise/pull/new/ft/new-branch
+remote: 
+To https://github.com/kunda4/git-cafe-exercise.git
+ * [new branch]      ft/new-branch -> ft/new-branch
+branch 'ft/new-branch' set up to track 'origin/ft/new-branch'.
+Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ 
 ```
