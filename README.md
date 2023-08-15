@@ -822,3 +822,29 @@ To https://github.com/kunda4/git-exercices2.git
 branch 'ft/squashing' set up to track 'origin/ft/squashing'.
 Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ 
 ```
+## Bundle 5
+### Exercice 1
+```bash
+Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ git add .
+Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ git commit -m "change place to restaurent"
+[main e71efea] change place to restaurent
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 357 bytes | 357.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/kunda4/git-cafe-exercise.git
+   d1d3f9c..e71efea  main -> main
+```
