@@ -925,3 +925,29 @@ To https://github.com/kunda4/git-cafe-exercise.git
 branch 'fix-bug' set up to track 'origin/fix-bug'.
 Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ 
 ```
+```bash
+Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ git add .
+Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ git status
+On branch fix-bug
+Your branch is up to date with 'origin/fix-bug'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index-4.html
+
+Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ git commit -m "change 4ne number"
+[fix-bug ee1b07a] change 4ne number
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ git push --set-upstream origin fix-bug
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 342 bytes | 342.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/kunda4/git-cafe-exercise.git
+   b2a97ec..ee1b07a  fix-bug -> fix-bug
+branch 'fix-bug' set up to track 'origin/fix-bug'.
+Andelas-MacBook-Pro:git-cafe-exercise andelarwanda$ 
+```
