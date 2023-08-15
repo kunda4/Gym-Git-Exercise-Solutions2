@@ -744,3 +744,81 @@ To https://github.com/kunda4/git-exercises.git
  + a3fff70...c37fadc main -> main (forced update)
 Andelas-MBP:git-exercises andelarwanda$ 
 ```
+## Bundle 4
+### Exercice 2
+```bash
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git commit -m "add a paragraph"
+On branch ft/footer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git add .
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git commit -m "add header"
+[ft/footer a5007cd] add header
+ 1 file changed, 5 insertions(+)
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git push -u origin ft/footer
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 522 bytes | 522.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/kunda4/git-exercices2/pull/new/ft/footer
+remote: 
+To https://github.com/kunda4/git-exercices2.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'git-copy/main'.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'git-copy/main'.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git checkout ft/squashing
+Switched to branch 'ft/squashing'
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$  git merge --squash ft/footer
+Updating 50622f0..a5007cd
+Fast-forward
+Squash commit -- not updating HEAD
+ home.html | 5 +++++
+ 1 file changed, 5 insertions(+)
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git add .
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git commit -m "footer changes squashing"
+[ft/squashing e105ce6] footer changes squashing
+ 1 file changed, 5 insertions(+)
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git push 
+fatal: The current branch ft/squashing has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/squashing
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ git push --set-upstream origin ft/squashing
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 535 bytes | 535.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/kunda4/git-exercices2/pull/new/ft/squashing
+remote: 
+To https://github.com/kunda4/git-exercices2.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+Andelas-MacBook-Pro:git-exrcises2 andelarwanda$ 
+```
